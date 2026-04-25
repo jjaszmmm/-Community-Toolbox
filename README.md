@@ -1,1 +1,1 @@
-# -Community-Toolbox
+Community Toolbox is a digital sharing management system created for apartment complex residents who need temporary access to household tools without buying them individually. The platform allows users to register tools, update availability status, search for needed equipment, and request to borrow items from neighbors through an organized interface. This system promotes cost savings, efficient resource sharing, and stronger community cooperation.
