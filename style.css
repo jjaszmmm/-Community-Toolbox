@@ -16,3 +16,47 @@ body {
     color: var(--text-main);
     line-height: 1.6;
 }
+
+/* Header */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(18, 18, 18, 0.95);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo { font-weight: 600; font-size: 1.5rem; }
+.logo span { color: var(--accent); }
+
+/* Navigation Links */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem; /* Increased spacing between links */
+}
+
+nav a {
+    color: var(--text-main);
+    text-decoration: none; /* Removed underlines */
+    font-size: 0.95rem;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+    padding: 80px 5%;
+    background: linear-gradient(180deg, #1a1a1a 0%, #121212 100%);
+    text-align: center;
+}
+
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
