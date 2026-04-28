@@ -1,0 +1,17 @@
+:root {
+    --bg-dark: #121212;
+    --bg-card: #1e1e1e;
+    --text-main: #e0e0e0;
+    --accent: #bb86fc;
+    --accent-hover: #9965f4;
+    --danger: #cf6679;
+    --success: #03dac6;
+    --border: #333;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+}
