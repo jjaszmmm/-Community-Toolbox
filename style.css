@@ -60,7 +60,6 @@ nav a:hover {
 }
 
 .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-
 .stats-container {
     display: flex;
     justify-content: center;
@@ -123,6 +122,17 @@ nav a:hover {
 
 .status-available { background: rgba(3, 218, 198, 0.1); color: var(--success); }
 .status-lent { background: rgba(207, 102, 121, 0.1); color: var(--danger); }
+
+.btn-primary {
+    background: var(--accent);
+    color: #000;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
 
 .btn-primary:hover {
     background: var(--accent-hover);
