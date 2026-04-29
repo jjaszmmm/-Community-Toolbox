@@ -8,20 +8,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header class="navbar">
-    <div class="logo">🛠️ Community<span>Toolbox</span></div>
-    <nav>
-        <a href="#stats">Dashboard</a>
-        <a href="#inventory">Browse Tools</a>
-        <button id="openFormBtn" class="btn-primary">+ Register Tool</button>
-    </nav>
-</header>
-<section class="hero" id="stats">
-    <div class="hero-content">
-        <h1>Hello, Resident</h1>
-        <p>Ready to get to work? Borrow and share equipment within your building instantly.</p>
-    </div>
-</section>
+        <div class="logo">🛠️ Community<span>Toolbox</span></div>
+        <nav>
+            <a href="#stats">Dashboard</a>
+            <a href="#inventory">Browse Tools</a>
+            <button id="openFormBtn" class="btn-primary">+ Register Tool</button>
+        </nav>
+    </header>
+
+    <section class="hero" id="stats">
+        <div class="hero-content">
+            <h1>Hello, Resident</h1>
+            <p>Ready to get to work? Borrow and share equipment within your building instantly.</p>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h2 id="utilizationRate">0%</h2>
+                    <p>Community Utilization</p>
+                </div>
+                <div class="stat-card">
+                    <h2 id="totalTools">0</h2>
+                    <p>Total Tools</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
     <script src="script.js"></script>
 </body>
 </html>
