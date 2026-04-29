@@ -60,3 +60,66 @@ nav a:hover {
 }
 
 .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.stat-card {
+    background: var(--bg-card);
+    padding: 1.5rem 3rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.stat-card h2 { color: var(--accent); font-size: 2.5rem; }
+
+/* Main Content */
+.container { padding: 2rem 5%; max-width: 1200px; margin: 0 auto; }
+
+.controls { margin-bottom: 2rem; }
+#searchInput {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+#searchInput:focus {
+    border-color: var(--accent);
+}
+
+/* Tool Grid */
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.tool-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: transform 0.2s;
+}
+
+.tool-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.status-available { background: rgba(3, 218, 198, 0.1); color: var(--success); }
+.status-lent { background: rgba(207, 102, 121, 0.1); color: var(--danger); }
