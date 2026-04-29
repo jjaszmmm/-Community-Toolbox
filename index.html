@@ -47,6 +47,25 @@
         </section>
     </main>
 
+    <div id="modalOverlay" class="overlay">
+        <div class="modal">
+            <h2>Register a New Tool</h2>
+            <form id="toolForm">
+                <input type="text" id="toolName" placeholder="Tool Name (e.g. Step Ladder)" required>
+                <input type="text" id="ownerName" placeholder="Your Name" required>
+                <input type="text" id="unitNumber" placeholder="Unit Number (e.g. 3C)" required>
+                <div class="modal-actions">
+                    <button type="button" id="closeFormBtn" class="btn-secondary">Cancel</button>
+                    <button type="submit" class="btn-primary">Add to Toolbox</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Community Toolbox POC. Designed for Apartment Complex A.</p>
+    </footer>
+
 
     <script src="script.js"></script>
 </body>
