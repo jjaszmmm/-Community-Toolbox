@@ -123,3 +123,16 @@ nav a:hover {
 
 .status-available { background: rgba(3, 218, 198, 0.1); color: var(--success); }
 .status-lent { background: rgba(207, 102, 121, 0.1); color: var(--danger); }
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
