@@ -71,4 +71,29 @@ function toggleBorrow(id) {
     saveAndRefresh();
 }
 
+// Logic: Delete
+function deleteTool(id) {
+    if(confirm('Remove this tool from the community list?')) {
+        tools = tools.filter(t => t.id !== id);
+        saveAndRefresh();
+    }
+}
+
+// Search Logic
+searchInput.addEventListener('input', (e) => {
+    const term = e.target.value.toLowerCase();
+    const filtered = tools.filter(t => t.name.toLowerCase().includes(term));
+    renderTools(filtered);
+});
+
+// Stats Update
+function updateStats() {
+    const total = tools.length;
+    const lent = tools.filter(t => t.status === 'Lent Out').length;
+    const rate = total === 0 ? 0 : Math.round((lent / total) * 100);
+    
+    document.getElementById('totalTools').innerText = total;
+    document.getElementById('utilizationRate').innerText = `${rate}%`;
+}
+
 }
