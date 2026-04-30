@@ -37,4 +37,21 @@ function renderTools(data) {
         `;
         toolGrid.appendChild(card);
     });
+    
+    // Logic: Add Tool
+toolForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const newTool = {
+        id: Date.now(),
+        name: document.getElementById('toolName').value,
+        owner: document.getElementById('ownerName').value,
+        unit: document.getElementById('unitNumber').value,
+        status: 'Available',
+        borrower: ''
+    };
+    tools.push(newTool);
+    saveAndRefresh();
+    toolForm.reset();
+    modalOverlay.style.display = 'none';
+});
 }
