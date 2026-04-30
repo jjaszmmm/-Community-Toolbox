@@ -54,4 +54,21 @@ toolForm.addEventListener('submit', (e) => {
     toolForm.reset();
     modalOverlay.style.display = 'none';
 });
+
+// Logic: Toggle Status (Borrow/Return)
+function toggleBorrow(id) {
+    const tool = tools.find(t => t.id === id);
+    if (tool.status === 'Available') {
+        const borrowerName = prompt("Enter your name to borrow this tool:");
+        if (borrowerName) {
+            tool.status = 'Lent Out';
+            tool.borrower = borrowerName;
+        }
+    } else {
+        tool.status = 'Available';
+        tool.borrower = '';
+    }
+    saveAndRefresh();
+}
+
 }
