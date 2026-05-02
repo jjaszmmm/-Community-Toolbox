@@ -79,6 +79,12 @@ function deleteTool(id) {
     }
 }
 
+function deleteTool(id) {
+    if(confirm('Remove this tool from the community list?')) {
+        tools = tools.filter(t => t.id !== id);
+        saveAndRefresh();
+    }
+}
 // Search Logic
 searchInput.addEventListener('input', (e) => {
     const term = e.target.value.toLowerCase();
@@ -102,7 +108,7 @@ function saveAndRefresh() {
 
     renderTools(tools);
 
-    updateStats();
+    updateStats();  
 }
 
 // Modal Toggle
