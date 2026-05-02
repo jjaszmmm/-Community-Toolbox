@@ -95,5 +95,18 @@ function updateStats() {
     document.getElementById('totalTools').innerText = total;
     document.getElementById('utilizationRate').innerText = `${rate}%`;
 }
-
 }
+function saveAndRefresh() {
+
+    localStorage.setItem('communityTools', JSON.stringify(tools));
+
+    renderTools(tools);
+
+    updateStats();
+}
+
+// Modal Toggle
+openFormBtn.onclick = () => modalOverlay.style.display = 'flex';
+closeFormBtn.onclick = () => modalOverlay.style.display = 'none';
+
+init();
