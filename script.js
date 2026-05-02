@@ -16,6 +16,7 @@ function init() {
 
 // Render Tools to UI
 function renderTools(data) {
+    if (!toolGrid) return;
     toolGrid.innerHTML = '';
     data.forEach(tool => {
         const isAvailable = tool.status === 'Available';
@@ -37,12 +38,13 @@ function renderTools(data) {
         `;
         toolGrid.appendChild(card);
     });
+}
     
     // Logic: Add Tool
 toolForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const newTool = {
-        id: Date.now(),
+        id: Date.now() + Math.random(),
         name: document.getElementById('toolName').value,
         owner: document.getElementById('ownerName').value,
         unit: document.getElementById('unitNumber').value,
@@ -79,12 +81,7 @@ function deleteTool(id) {
     }
 }
 
-function deleteTool(id) {
-    if(confirm('Remove this tool from the community list?')) {
-        tools = tools.filter(t => t.id !== id);
-        saveAndRefresh();
-    }
-}
+
 // Search Logic
 searchInput.addEventListener('input', (e) => {
     const term = e.target.value.toLowerCase();
@@ -101,7 +98,7 @@ function updateStats() {
     document.getElementById('totalTools').innerText = total;
     document.getElementById('utilizationRate').innerText = `${rate}%`;
 }
-}
+
 function saveAndRefresh() {
 
     localStorage.setItem('communityTools', JSON.stringify(tools));
@@ -116,3 +113,6 @@ openFormBtn.onclick = () => modalOverlay.style.display = 'flex';
 closeFormBtn.onclick = () => modalOverlay.style.display = 'none';
 
 init();
+
+window.toggleBorrow = toggleBorrow;
+window.deleteTool = deleteTool;
