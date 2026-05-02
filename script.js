@@ -93,10 +93,15 @@ searchInput.addEventListener('input', (e) => {
 function updateStats() {
     const total = tools.length;
     const lent = tools.filter(t => t.status === 'Lent Out').length;
-    const rate = total === 0 ? 0 : Math.round((lent / total) * 100);
-    
-    document.getElementById('totalTools').innerText = total;
-    document.getElementById('utilizationRate').innerText = `${rate}%`;
+    const rate = total === 0 ? 0 : Math.round(((total - lent) / total) * 100);
+
+    // Find the elements safely
+    const totalEl = document.getElementById('totalTools');
+    const rateEl = document.getElementById('utilizationRate');
+
+    // Only change text if the element actually exists in HTML
+    if (totalEl) totalEl.innerText = total;
+    if (rateEl) rateEl.innerText = `${rate}%`;
 }
 
 function saveAndRefresh() {
